@@ -18,11 +18,22 @@
         <title>Users Table</title>
     </head>
     <body>
-    <%
-       User user = (User) session.getAttribute("loggedUser");
-    %>
 
-    <%= "Welcome "+ user.getName()%>
+        <%
+            User user = (User) session.getAttribute("loggedUser");
+
+        %>
+
+        <%= "Welcome "+ user.getName()%>
+
+            <form  method="post" action="logout">
+                <button class="b" type="submit">Log Out</button>
+            </form>
+
+
+
+
+
         <%
           List<User>  userList = (List<User>) request.getAttribute("userList");
 
